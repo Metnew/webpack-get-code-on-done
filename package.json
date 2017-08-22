@@ -1,0 +1,37 @@
+{
+  "name": "webpack-get-code-on-done",
+  "version": "0.0.0-development",
+  "description": "Returns compiled code after compilation (compiler \"done\")",
+  "main": "src/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Metnew/webpack-get-code-on-done.git"
+  },
+  "author": {
+    "name": "Vladimir Metnew",
+    "email": "vladimirmetnew@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^3.0.0",
+    "require-from-string": "^1.2.1",
+    "source-map-support": "^0.4.2"
+  },
+  "peerDependencies": {
+    "webpack": "*"
+  },
+  "scripts": {
+    "test": "jest",
+    "release": "semantic-release pre && npm publish && semantic-release post",
+    "cz": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "semantic-release": "^6.3.6",
+    "validate-commit-msg": "^2.14.0"
+  }
+}
