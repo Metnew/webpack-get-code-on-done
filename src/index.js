@@ -52,7 +52,7 @@ function installSourceMapSupport (fs) {
  * @param   {Compiler} compiler - e.g webpack([clientConfig, serverConfig])
  * @param   {Function} done - callback to be executed with compiled server code
  */
-function webpackHotServerMiddleware (compiler, done) {
+function webpackGetCodeOnDone (compiler, done) {
 	debug('Using webpack-get-code-on-done')
 
 	const options = Object.assign({}, DEFAULTS)
@@ -85,8 +85,13 @@ function webpackHotServerMiddleware (compiler, done) {
 			debug(ex)
 			error = ex
 		}
-		done(compiledCode)
+
+		if (compiledCode) {
+			done(compiledCode)
+		} else {
+			throw new Error('webpack-get-code-on-done: Compiled code is `undefined`. Please check latest changes that may produce this error.')
+		}
 	})
 }
 
-module.exports = webpackHotServerMiddleware
+module.exports = webpackGetCodeOnDone
