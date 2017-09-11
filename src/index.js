@@ -9,11 +9,11 @@ const DEFAULTS = {
 	chunkName: 'main'
 }
 
-function interopRequireDefault(obj) {
+function interopRequireDefault (obj) {
 	return obj && obj.__esModule ? obj.default : obj
 }
 
-function getFilename(stats, outputPath, chunkName) {
+function getFilename (stats, outputPath, chunkName) {
 	const assetsByChunkName = stats.toJson().assetsByChunkName
 	let filename = assetsByChunkName[chunkName] || ''
 	// If source maps are generated `assetsByChunkName.main`
@@ -26,14 +26,14 @@ function getFilename(stats, outputPath, chunkName) {
 	)
 }
 
-function getCompiled(filename, buffer) {
+function getCompiled (filename, buffer) {
 	return interopRequireDefault(requireFromString(buffer.toString(), filename))
 }
 
-function installSourceMapSupport(fs) {
+function installSourceMapSupport (fs) {
 	sourceMapSupport.install({
 		emptyCacheBetweenOperations: true,
-		retrieveFile(source) {
+		retrieveFile (source) {
 			try {
 				return fs.readFileSync(source, 'utf8')
 			} catch (ex) {
@@ -48,7 +48,7 @@ function installSourceMapSupport(fs) {
  * @param   {Compiler} compiler - e.g webpack([clientConfig, serverConfig])
  * @param   {Function} done - callback to be executed with compiled server code
  */
-function webpackGetCodeOnDone(compiler, done) {
+function webpackGetCodeOnDone (compiler, done) {
 	const options = Object.assign({}, DEFAULTS)
 
 	if (!(compiler instanceof Compiler)) {
