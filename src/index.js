@@ -83,7 +83,7 @@ function webpackGetCodeOnDone(compiler, done) {
 			done(compiledCode)
 		} else {
 			throw new Error(
-				`webpack-get-code-on-done: Compiled code is `undefined`. Please check latest changes that may produce this error. ${error}`
+				`webpack-get-code-on-done: Compiled code is 'undefined'. Please check latest changes that may produce this error. ${error}`
 			)
 		}
 	})
