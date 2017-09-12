@@ -33,5 +33,5 @@
 		"semantic-release": "^7.0.2",
 		"validate-commit-msg": "^2.14.0"
 	},
-	"files": ["tests", "README.md"]
+	"files": ["tests", "README.md", ".vcmrc", ".travis.yml"]
 }
