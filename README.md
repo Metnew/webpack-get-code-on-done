@@ -31,7 +31,7 @@ Shortly, it can be described like:
 2. Compile **both server and client with Webpack**.
 3. Find **compiled decorator** for server and **decorate your dev server**. _DevServer = express server with development middlewares._
 4. ????????????
-5. PROFIT!!!!!!
+5. Every time your code changes, webpack recompiles your code and decorates your server with newly compiled code.
 
 ## How?
 
