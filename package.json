@@ -2,7 +2,7 @@
 	"name": "webpack-get-code-on-done",
 	"version": "1.0.3",
 	"description": "Returns compiled code after compilation (compiler \"done\")",
-	"main": "src/",
+	"main": "src/index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Metnew/webpack-get-code-on-done.git"
