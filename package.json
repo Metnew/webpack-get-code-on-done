@@ -1,40 +1,40 @@
 {
-  "name": "webpack-get-code-on-done",
-  "version": "1.1.0",
-  "description": "Returns compiled code after compilation (compiler \"done\")",
-  "main": "src/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Metnew/webpack-get-code-on-done.git"
-  },
-  "author": {
-    "name": "Vladimir Metnew",
-    "email": "vladimirmetnew@gmail.com"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "require-from-string": "^1.2.1",
-    "source-map-support": "^0.4.2"
-  },
-  "peerDependencies": {
-    "webpack": "*"
-  },
-  "scripts": {
-    "test": "jest",
-    "release": "semantic-release pre && npm publish && semantic-release post",
-    "cz": "git-cz",
-    "commitmsg": "validate-commit-msg",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
-  "devDependencies": {
-    "commitizen": "^2.9.6",
-    "husky": "^0.14.3",
-    "jest": "^21.0.0",
-    "semantic-release": "^7.0.2",
-    "validate-commit-msg": "^2.14.0"
-  },
-  "files": [
-    "tests",
-    "README.md"
-  ]
+	"name": "webpack-get-code-on-done",
+	"version": "1.1.0",
+	"description": "Returns compiled code after compilation (compiler \"done\")",
+	"main": "src/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Metnew/webpack-get-code-on-done.git"
+	},
+	"author": {
+		"name": "Vladimir Metnew",
+		"email": "vladimirmetnew@gmail.com"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"require-from-string": "^1.2.1",
+		"source-map-support": "^0.4.2"
+	},
+	"peerDependencies": {
+		"webpack": "*"
+	},
+	"scripts": {
+		"test": "jest",
+		"release": "semantic-release pre && npm publish && semantic-release post",
+		"cz": "git-cz",
+		"commitmsg": "validate-commit-msg",
+		"semantic-release": "semantic-release pre && npm publish && semantic-release post"
+	},
+	"devDependencies": {
+		"commitizen": "^2.9.6",
+		"husky": "^0.14.3",
+		"jest": "^21.0.0",
+		"semantic-release": "^7.0.2",
+		"validate-commit-msg": "^2.14.0"
+	},
+	"files": ["tests", "README.md"],
+	"release": {
+		"debug": false
+	}
 }
