@@ -8,13 +8,16 @@ Allows you to get compiled code after compiler's `done` event. Heavily inspired 
 
 ## Why?
 
-It's very useful when you're working with _universal apps_. Check **[Tiny-Universal-Skeleton](https://github.com/Metnew/tiny-universal-skeleton)** for a usage example with step-by-step guide.
+It's very useful when you're working with _universal apps_. Check **[Tiny-Universal-Skeleton](https://github.com/Metnew/tiny-universal-skeleton)** for an example with step-by-step guide.
+
+### Where?
+Webpack-Get-Code-On-Done is used inside [suicrux](https://github.com/Metnew/suicrux).
 
 ### API
 
-#### `webpackHotFullStack(serverCompiler, done):`
+#### `webpackGetCodeOnDone(serverCompiler, done):`
 
-Module exports function that accepts 2 arguments:
+Default export - function that accepts 2 arguments:
 
 1. `serverCompiler` - webpack Compiler that compiles your server.
 2. `done` - function that will be executed after `compile.on('done')` event. E.g. Every time your code will be changed.
